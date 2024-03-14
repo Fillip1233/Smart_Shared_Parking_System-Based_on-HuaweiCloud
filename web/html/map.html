@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <link rel="stylesheet" href="../css/map.css">
+    <title>地图加载完成</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div class="input-card" style="width:13rem">
+        <h4>底图语言切换</h4>
+        <div id="lang">
+            <div class="input-item"><input id="en" name="language" type="radio" checked="checked"><span
+                    class="input-text">英文底图</span></div>
+            <div class="input-item"><input id="zh_en" name="language" type="radio"><span class="input-text">中英文对照</span>
+            </div>
+            <div class="input-item"><input id="zh_cn" name="language" type="radio"><span class="input-text">中文底图</span>
+            </div>
+        </div>
+        <script src="https://webapi.amap.com/maps?v=1.4.15&key=6b89276b97f90c0a86b1cdd044f76e03"></script>
+        <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+        <script src="/js/map.js"></script>
+        <script>
+
+            map.on("complete", function () {
+                log.success("地图加载完成！");
+            });
+        </script>
+        </div>
+</body>
+
+</html>

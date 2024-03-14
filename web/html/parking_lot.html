@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/parking_lot.js"></script>
+    <link rel="stylesheet" href="../css/parking_lot.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="b1" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b1','m1','btn1')" onmouseout="change_color2('b1','m1','btn1')">
+            <div id="t1" class="title" onclick="openDialog()">深圳大学冬筑停车场&nbsp;——&nbsp;D1</div>
+            <div id="lab1" class="lab" style="display: none;">预约</div>
+            <div id="m1" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c1" class="content">距离您2km，预计3分钟到达,每小时8元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn1" class="button" style="color: white;background-color: teal;"
+                    onclick="bookParking('btn1','lab1')">预约</div>
+            </div>
+        </div>
+        <div id="b2" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b2','m2','btn2')" onmouseout="change_color2('b2','m2','btn2')">
+            <div id="t2" class="title" onclick="openDialog()">深圳大学冬筑停车场&nbsp;——&nbsp;D2</div>
+            <div id="lab2" class="lab" style="display: none;">已预约</div>
+            <div id="m2" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c2" class="content">距离您2km，预计3分钟到达,每小时8元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn2" class="button" style="color: white;background-color: darkred;"
+                    onclick="bookParking('btn2','lab2')">已被预约</div>
+            </div>
+        </div>
+        <div id="b3" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b3','m3','btn3')" onmouseout="change_color2('b3','m3','btn3')">
+            <div id="t3" class="title" onclick="openDialog()">深圳大学冬筑停车场&nbsp;——&nbsp;D3</div>
+            <div id="lab3" class="lab" style="display: none;">已预约</div>
+            <div id="m3" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c3" class="content">距离您2km，预计3分钟到达,每小时8元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn3" class="button" style="color: white;background-color: darkred;"
+                    onclick="bookParking('btn3','lab3')">已被预约</div>
+            </div>
+        </div>
+        <div id="b4" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b4','m4','btn4')" onmouseout="change_color2('b4','m4','btn4')">
+            <div id="t4" class="title" onclick="openDialog()">深圳大学冬筑停车场&nbsp;——&nbsp;D4</div>
+            <div id="lab4" class="lab" style="display: none;">已预约</div>
+            <div id="m4" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c4" class="content">距离您2km，预计3分钟到达,每小时8元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn4" class="button" style="color: white;background-color: teal;"
+                    onclick="bookParking('btn4','lab4')">预约</div>
+            </div>
+        </div>
+        <div id="b5" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b5','m5','btn5')" onmouseout="change_color2('b5','m5','btn5')">
+            <div id="t5" class="title" onclick="openDialog()">深圳大学冬筑停车场&nbsp;——&nbsp;D5</div>
+            <div id="lab5" class="lab" style="display: none;">已预约</div>
+            <div id="m5" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c5" class="content">距离您2km，预计3分钟到达,每小时8元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn5" class="button" style="color: white;background-color: darkred;"
+                    onclick="bookParking('btn5','lab5')">已被预约</div>
+            </div>
+        </div>
+        <div id="b6" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b6','m6','btn6')" onmouseout="change_color2('b6','m6','btn6')">
+            <div id="t6" class="title" onclick="openDialog()">深圳大学冬筑停车场&nbsp;——&nbsp;D6</div>
+            <div id="lab6" class="lab" style="display: none;">已预约</div>
+            <div id="m6" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c6" class="content">距离您2km，预计3分钟到达,每小时8元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn6" class="button" style="color: white;background-color: darkred;"
+                    onclick="bookParking('btn6','lab6')">已被预约</div>
+            </div>
+        </div>
+        <div id="b7" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b7','m7','btn7')" onmouseout="change_color2('b7','m7','btn7')">
+            <div id="t7" class="title" onclick="openDialog()">深圳大学AutoLeaders&nbsp;——&nbsp;D7</div>
+            <div id="lab7" class="lab" style="display: none;">已预约</div>
+            <div id="m7" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c7" class="content">距离您5km，预计8分钟到达,每小时16元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn7" class="button" style="color: white;background-color: teal;"
+                    onclick="bookParking('btn7','lab7')">预约</div>
+            </div>
+        </div>
+        <div id="b8" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b8','m8','btn8')" onmouseout="change_color2('b8','m8','btn8')">
+            <div id="t8" class="title" onclick="openDialog()">深圳大学AutoLeaders&nbsp;——&nbsp;D8</div>
+            <div id="lab8" class="lab" style="display: none;">已预约</div>
+            <div id="m8" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c8" class="content">距离您5km，预计8分钟到达,每小时16元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn8" class="button" style="color: white;background-color: darkred;"
+                    onclick="bookParking('btn8','lab8')">已被预约</div>
+            </div>
+        </div>
+        <div id="b9" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b9','m9','btn9')" onmouseout="change_color2('b9','m9','btn9')">
+            <div id="t9" class="title" onclick="openDialog()">深圳大学AutoLeaders&nbsp;——&nbsp;D9</div>
+            <div id="lab9" class="lab" style="display: none;">已预约</div>
+            <div id="m9" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c9" class="content">距离您5km，预计8分钟到达,每小时16元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn9" class="button" style="color: white;background-color: darkred;"
+                    onclick="bookParking('btn9','lab9')">已被预约</div>
+            </div>
+        </div>
+        <div id="b10" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b10','m10','btn10')" onmouseout="change_color2('b10','m10','btn10')">
+            <div id="t10" class="title" onclick="openDialog()">深圳大学AutoLeaders&nbsp;——&nbsp;D10</div>
+            <div id="lab10" class="lab" style="display: none;">已预约</div>
+            <div id="m10" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c10" class="content">距离您5km，预计8分钟到达,每小时16元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn10" class="button" style="color: white;background-color: teal;"
+                    onclick="bookParking('btn10','lab10')">预约</div>
+            </div>
+        </div>
+        <div id="b11" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b11','m11','btn11')" onmouseout="change_color2('b11','m11','btn11')">
+            <div id="t11" class="title" onclick="openDialog()">深圳大学AutoLeaders&nbsp;——&nbsp;D11</div>
+            <div id="lab11" class="lab" style="display: none;">已预约</div>
+            <div id="m11" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c11" class="content">距离您5km，预计8分钟到达,每小时16元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn11" class="button" style="color: white;background-color: teal;"
+                    onclick="bookParking('btn11','lab11')">预约</div>
+            </div>
+        </div>
+        <div id="b12" class="box" style="color: black;background-color: white;"
+            onmouseover="change_color1('b12','m12','btn12')" onmouseout="change_color2('b12','m12','btn12')">
+            <div id="t12" class="title" onclick="openDialog()">深圳大学AutoLeaders&nbsp;——&nbsp;D12</div>
+            <div id="lab12" class="lab" style="display: none;">已预约</div>
+            <div id="m12" class="middle_line" style="border-bottom: 1px solid green;" onclick="openDialog()"></div>
+            <div id="c12" class="content">距离您5km，预计8分钟到达,每小时16元<br>车位出租人：xxx&nbsp;信誉等级：5 <div
+                    id="btn12" class="button" style="color: white;background-color: teal;"
+                    onclick="bookParking('btn12','lab12')">预约</div>
+            </div>
+        </div>
+        <div class='demo-bg'>
+            <div class='demo-txt'>
+                <button id="btn" onclick="closeDialog()"><img id="closeimg" src="/images/关闭图标.png" alt=""></button>
+                <img id="displayimg" src="/images/loginImage.jpg" alt="这是一张图片">
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+
+    var demobg = document.querySelector(".demo-bg");
+    var demotxt = document.querySelector(".demo-txt");
+    function openDialog() {
+        demotxt.style.display = "block";
+        demobg.style.display = "block";
+    }
+
+    function closeDialog() {
+        demotxt.style.display = "none";
+        demobg.style.display = "none";
+    }
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>登陆/注册</title>
+    <link rel="stylesheet" href="../css/loginStyle.css">
+    <link rel="shortcut icon" href="../images/loginImage.jpg">
+</head>
+
+<body>
+    <div class="content">
+        <div class="form sign-in">
+            <br>
+            <br>
+            <br>
+            <h2>欢迎回来</h2>
+            <br>
+            <br>
+            <br>
+            <form action="">
+                <br>
+                <br>
+                <input autocomplete="off" type="email" placeholder="邮箱" id="user_name" value="" />
+                <br>
+                <br>
+                <input autocomplete="off" type="password" placeholder="密码" id="password" />
+                <br>
+                <p class="forgot-pass"><a href="javascript:">忘记密码？</a></p>
+                <button type="button" class="submit" onclick="check_login()">登 录</button>
+            </form>
+            <button type="button" class="fb-btn" onclick="check()">使用 <span>华为</span>
+                帐号登录</button>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2>还未注册？</h2>
+                    <p>立即注册，发现大量机会！</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>已有帐号？</h2>
+                    <p>有帐号就登录吧，好久不见了！</p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">注 册</span>
+                    <span class="m--in">登 录</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <br><br><br>
+                <h2>立即注册</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <form action="">
+                    <input autocomplete="off" id="R_username" type="text" placeholder="用户名" value="" />
+                    <br>
+                    <br>
+                    <input autocomplete="off" id="R_email" type="email" placeholder="邮箱" value="" />
+                    <br>
+                    <br>
+                    <input autocomplete="off" id="R_password" type="password" placeholder="密码" value="" />
+                    <button type="button" class="submit" onclick="Registration_check()">注 册</button>
+                </form>
+                <button type="button" class="fb-btn">使用 <span>华为</span>
+                    帐号注册</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script type="text/javascript">
+        function check_login() {
+            var name = document.getElementById("user_name").value;
+            var pass = document.getElementById("password").value;
+            if (name == "3435927175@qq.com" && pass == "123456789") {
+                alert("登录成功！");
+                window.location.href = '/index.html';
+            }
+        }
+        function check() {
+
+            window.location.href = '/index.html';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>关键字检索</title>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css" />
+    <style type="text/css">
+        #panel {
+            position: absolute;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 10px;
+            right: 10px;
+            width: 280px;
+        }
+
+        #search {
+            outline-style: none;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 13px 14px;
+            width: 620px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: "Microsoft soft";
+        }
+
+        #search:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        }
+    </style>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=6b89276b97f90c0a86b1cdd044f76e03"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <form style="display:inline-block;position: relative;left: 40%;margin-left: -310px;width: auto;top: 20px;">
+        <input type="text" id="search" autocomplete="off" placeholder="输入预约地点" value="">
+        <div id="button"
+            style="display:inline-block;font-weight:bold;height: 46px;border: none;width: 120px;background-color: lightseagreen;font-size: 18px;line-height: 46px;text-align: center;cursor: pointer;"
+            onclick="getPlace()">搜索</div>
+    </form>
+    <div id="panel"></div>
+    <div>
+        <div style="height: 40px;padding: 0px;width: 80px;line-height: 40px;">
+            共享停车位
+        </div>
+    </div>
+    
+    <div class="info"></div>
+        <!-- <a href="/images/"></a> -->
+        <script type="text/javascript">
+            var map = new AMap.Map("container", {
+                resizeEnable: true
+            });
+            function getPlace() {
+                var place = document.getElementById("search").value;
+                AMap.service(["AMap.PlaceSearch"], function () {
+                    //构造地点查询类
+                    var placeSearch = new AMap.PlaceSearch({
+                        pageSize: 1, // 单页显示结果条数
+                        pageIndex: 1, // 页码
+                        citylimit: true,  //是否强制限制在设置的城市内搜索
+                        map: map, // 展现结果的地图实例
+                        panel: "panel", // 结果列表将在此容器中进行展示。
+                        autoFitView: true // 是否自动调整地图视野使绘制的 Marker点都处于视口的可见范围
+                    });
+                    //关键字查询
+                    placeSearch.search(place);
+                });
+            }
+            var markers = [];
+            var positions = [
+                [113.936683, 22.532681],
+                [113.934392, 22.537737],
+                [113.937777, 22.527694],
+                [113.937976, 22.526316],
+                [113.938448, 22.525662],
+                [113.940701, 22.530498],
+                [113.94201, 22.530479],
+                [113.940819, 22.528942],
+                [113.938566, 22.530687],
+                [113.938502, 22.53366],
+                [113.938308, 22.534542],
+                [113.939832, 22.536127],
+                [113.939242, 22.536167],
+                [113.939253, 22.538248],
+                [113.938609, 22.537138],
+                [113.936409, 22.535632],
+                [113.934167, 22.534066],
+                [113.933148, 22.533917],
+                [113.933073, 22.532877],
+                [113.934746, 22.529517],
+                [113.93038, 22.527892],
+                [113.933631, 22.527089],
+                [113.935959, 22.529567]
+            ];
+            for (var i = 0, marker; i < positions.length; i++) {
+
+                marker = new AMap.Marker({
+                    map: map,
+                    icon: '../images/dingwei (2).png',
+                    position: positions[i]
+                });
+
+                markers.push(marker);
+                marker.setTitle('我是marker的title');
+                marker.setLabel({
+                    offset: new AMap.Pixel(20, 20),  //设置文本标注偏移量
+                    content: "<div class='info'>共享停车位</div>", //设置文本标注内容
+                    direction: 'right' //设置文本标注方位
+                });
+            }
+
+        </script>
+</body>
+
+</html>

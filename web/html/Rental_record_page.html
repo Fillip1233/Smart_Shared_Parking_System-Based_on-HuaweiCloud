@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>欢迎页面-L-admin1.0</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/xadmin.css">
+  <link rel="stylesheet" href="../css/Rental_record_page.css">
+  <script src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../lib/layui/layui.js" charset="utf-8"></script>
+  <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="x-nav">
+    <span class="layui-breadcrumb">
+      <a href="">首页</a>
+      <a href="">演示</a>
+      <a>
+        <cite>车位出租记录</cite></a>
+    </span>
+    <a class="layui-btn layui-btn-primary layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+      href="javascript:location.replace(location.href);" title="刷新">
+      <i class="layui-icon" style="line-height:38px">ဂ</i></a>
+  </div>
+  <div class="x-body">
+    <div class="layui-row" style="text-align: center;margin-bottom: 10px;">
+      <span id="warn"><img  height="20px" width="20px" src="../images/警告.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如需查询详细信息请将出租编号发送给人工客服</span>
+      <form id="top_form">
+        <input type="text" id="search" autocomplete="off" placeholder="输入正确租车编号&nbsp;,&nbsp;显示对应出租记录" value="">
+      </form>
+    </div>
+    <xblock>
+      <span class="x-right" style="line-height:40px">共有数据：12 条</span>
+    </xblock>
+    <table class="layui-table">
+      <thead>
+        <tr>
+          <th style="text-align: center;">出租编号</th>
+          <th style="text-align: center;">租用时间</th>
+          <th style="text-align: center;">车位地址</th>
+          <th style="text-align: center;">备注</th>
+      </thead>
+      <tbody>
+        <tr id="number1">
+          <td class="c1" style="background-color: white;color: black;" id="2020111234">2020111234</td>
+          <td class="c1" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c1" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D1</td>
+          <td class="c1" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number2">
+          <td class="c2" style="background-color: white;color: black;" id="2020112345">2020112345</td>
+          <td class="c2" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c2" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D2</td>
+          <td class="c2" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number3">
+          <td class="c3" style="background-color: white;color: black;" id="2020113456">2020113456</td>
+          <td class="c3" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c3" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D3</td>
+          <td class="c3" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number4">
+          <td class="c4" style="background-color: white;color: black;" id="2020114567">2020114567</td>
+          <td class="c4" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c4" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D4</td>
+          <td class="c4" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number5">
+          <td class="c5" style="background-color: white;color: black;" id="2020115678">2020115678</td>
+          <td class="c5" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c5" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D5</td>
+          <td class="c5" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number6">
+          <td class="c6" style="background-color: white;color: black;" id="2020116789">2020116789</td>
+          <td class="c6" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c6" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D6</td>
+          <td class="c6" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number7">
+          <td class="c7" style="background-color: white;color: black;" id="2020117890">2020117890</td>
+          <td class="c7" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c7" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D7</td>
+          <td class="c7" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number8">
+          <td class="c8" style="background-color: white;color: black;" id="2020121234">2020121234</td>
+          <td class="c8" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c8" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D8</td>
+          <td class="c8" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number9">
+          <td class="c9" style="background-color: white;color: black;" id="2020122345">2020122345</td>
+          <td class="c9" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c9" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D9</td>
+          <td class="c9" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number10">
+          <td class="c10" style="background-color: white;color: black;" id="2020123456">2020123456</td>
+          <td class="c10" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c10" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D10</td>
+          <td class="c10" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number11">
+          <td class="c11" style="background-color: white;color: black;" id="2020124567">2020124567</td>
+          <td class="c11" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c11" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D11</td>
+          <td class="c11" style="background-color: white;color: black;">无</td>
+        </tr>
+        <tr id="number12">
+          <td class="c12" style="background-color: white;color: black;" id="2020125678">2020125678</td>
+          <td class="c12" style="background-color: white;color: black;">
+            2020.9.1&nbsp;8:00&nbsp;-&nbsp;2024.7.1&nbsp;12:30</td>
+          <td class="c12" style="background-color: white;color: black;">深圳大学沧海校区机电与控制工程学院停车场&nbsp;——&nbsp;D12</td>
+          <td class="c12" style="background-color: white;color: black;">无</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="page">
+      <div id="pagebox">
+        <div class="page_change">&lt;&lt;</div>
+        <div class="page_change">1</div>
+        <div class="page_change">&gt;&gt;</div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+
+  var idbox = [
+    2020111234,
+    2020112345,
+    2020113456,
+    2020114567,
+    2020115678,
+    2020116789,
+    2020117890,
+    2020121234,
+    2020122345,
+    2020123456,
+    2020124567,
+    2020125678
+  ];
+
+  var temp = "";
+  var judgment = "false";
+  function outstand() {
+    var number = document.getElementById("search").value;
+    for (var i = 0; i < idbox.length; i++) {
+      if (idbox[i] == number) {
+        judgment = "ture";
+        var classname = document.getElementById(number).className;
+        var classbox = document.getElementsByClassName(classname);
+        for (var j = 0; j < classbox.length; j++) {
+          classbox[j].style['color'] = "white";
+          classbox[j].style['background-color'] = "rgb(34,35,36)";
+        }
+        temp = number;
+      }
+    }
+    if (judgment) {
+      for (var i = 0; i < idbox.length; i++) {
+        if (idbox[i] != temp) {
+          var classname = document.getElementById(idbox[i]).className;
+          var classbox = document.getElementsByClassName(classname);
+          for (var j = 0; j < classbox.length; j++) {
+            classbox[j].style['color'] = "black";
+            classbox[j].style['background-color'] = "white";
+          }
+        }
+      }
+    }
+    temp = "";
+    judgment = "false";
+  }
+  var oBtn = document.getElementById("search");
+  if ('oninput' in oBtn) {
+    oBtn.addEventListener("input", outstand, false);
+  }
+</script>
+
+</html>

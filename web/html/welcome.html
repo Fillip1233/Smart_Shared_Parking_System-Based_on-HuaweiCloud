@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-L-admin1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <link rel="shortcut icon" href="/images/微信图片_20210712101247.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <style>
+        .time span {
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="x-body layui-anim layui-anim-up">
+        <fieldset class="layui-elem-field">
+            <legend>数据记录</legend>
+            <div class="layui-field-box">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body">
+                            <div class="layui-carousel x-admin-carousel x-admin-backlog" lay-anim=""
+                                lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 90px;">
+                                <div carousel-item="">
+                                    <ul class="layui-row layui-col-space10 layui-this">
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>共享车位数</h3>
+                                                <p>
+                                                    <cite>66</cite>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>空闲车位数</h3>
+                                                <p>
+                                                    <cite>12</cite>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>您的车位数</h3>
+                                                <p>
+                                                    <cite>3</cite>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>您已出租车位数</h3>
+                                                <p>
+                                                    <cite>2</cite>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>累计被租用次数</h3>
+                                                <p>
+                                                    <cite>67</cite>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="layui-col-xs2">
+                                            <a href="javascript:;" class="x-admin-backlog-body">
+                                                <h3>车位利用效率</h3>
+                                                <p>
+                                                    <cite>95%</cite>
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="layui-elem-field">
+            <legend>享停车&nbsp;每周调查</legend>
+            <div class="layui-field-box">
+                <div id="container" style="height: 400px;;width: 100%;"></div>
+            </div>
+        </fieldset>
+        <fieldset class="layui-elem-field">
+            <legend>开发团队</legend>
+            <div class="layui-field-box">
+                <table class="layui-table">
+                    <tbody>
+                        <tr>
+                            <th>版权所有</th>
+                            <td>反卷小分队</td>
+                        </tr>
+                        <tr>
+                            <th>开发者</th>
+                            <td>反卷小分队</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </fieldset>
+    </div>
+
+</body>
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {};
+    var option;
+    option = {
+        title: {
+            text: '某一相同地段一周内两小区车位比',
+            subtext: ''
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['未加入共享停车系统', '加入共享停车系统']
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataZoom: {
+                    yAxisIndex: 'none'
+                },
+                dataView: { readOnly: false },
+                magicType: { type: ['line', 'bar'] },
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                formatter: '{value}'
+            }
+        },
+        series: [
+            {
+                name: '未加入共享停车系统',
+                type: 'line',
+                data: [3.7, 3.1, 2.8, 3.4, 3.6, 2.9, 3.0],
+                markPoint: {
+                    data: [
+                        { type: 'max', name: '最大值' },
+                        { type: 'min', name: '最小值' }
+                    ]
+                },
+                markLine: {
+                    data: [
+                        { type: 'average', name: '平均值' }
+                    ]
+                }
+            },
+            {
+                name: '加入共享停车系统',
+                type: 'line',
+                data: [1.4, 1.2, 1.1, 1.3, 1.35, 1.15, 1.1],
+                markPoint: {
+                    data: [
+                        { name: '周最低', value: -2, xAxis: 1, yAxis: -1.5 }
+                    ]
+                },
+                markLine: {
+                    data: [
+                        { type: 'average', name: '平均值' },
+                        [{
+                            symbol: 'none',
+                            x: '90%',
+                            yAxis: 'max'
+                        }, {
+                            symbol: 'circle',
+                            label: {
+                                position: 'start',
+                                formatter: '最大值'
+                            },
+                            type: 'max',
+                            name: '最高点'
+                        }]
+                    ]
+                }
+            }
+        ]
+    };
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+</script>
+
+</html>
